@@ -2,7 +2,7 @@ package com.pattern.factory;
 
 public class NotificationFactory {
 
-	public Notification createNotification(String channel)
+	public static Notification createNotification(String channel)
 	{
 		
 		if(channel==null||channel.isEmpty())
