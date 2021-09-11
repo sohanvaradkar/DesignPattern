@@ -9,12 +9,12 @@ class VegMealBuilder implements  MealBuilderInterface{
 private  Meal meal=new Meal();
     @Override
     public void buildBurger() {
-            meal.add(new VegBurger());
+            meal.addItem(new VegBurger());
     }
 
     @Override
     public void buildDrink() {
-            meal.add(new Coke());
+            meal.addItem(new Coke());
     }
 
     @Override
@@ -26,16 +26,16 @@ class NonVegMealBuilder implements MealBuilderInterface{
 private Meal nonVegMeal=new Meal();
     @Override
     public void buildBurger() {
-        nonVegMeal.
+        nonVegMeal.addItem(new ChickenBurger());
     }
 
     @Override
     public void buildDrink() {
-
+        nonVegMeal.addItem(new Pepsi());
     }
 
     @Override
     public Meal getMeal() {
-        return null;
+        return nonVegMeal;
     }
 }
